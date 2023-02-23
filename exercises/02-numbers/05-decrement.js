@@ -1,4 +1,4 @@
-let age = 90; // e.g.
+let age2 = 90; // e.g.
 
 /**
  * Decrement the variable "age" by 1. (That is, subtract 1).
@@ -7,3 +7,6 @@ let age = 90; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+age2 --;
+console.log(age2);

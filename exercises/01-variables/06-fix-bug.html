@@ -36,13 +36,13 @@
 
       // Do not change this.
       !(function () {
-        document.querySelector("#form").addEventListener("submit", (e) => {
+        document.querySelector('#form').addEventListener('submit', (e) => {
           e.preventDefault();
 
-          document.querySelector("#name").value; // Change this line only. Set me to a variable called "content".
+          let content = document.querySelector('#name').value; // Change this line only. Set me to a variable called "content".
 
           // Do not change this
-          alert("Hello " + content);
+          alert('Hello ' + content);
         });
       })();
     </script>

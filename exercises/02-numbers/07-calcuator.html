@@ -43,17 +43,18 @@
 
       // Do not change this.
       !(function () {
-        Object.values(document.querySelectorAll("input")).forEach((input) => {
-          input.addEventListener("input", () => {
-            let a = parseInt(document.querySelector("#a").value || 0);
-            let b = parseInt(document.querySelector("#b").value || 0);
+        Object.values(document.querySelectorAll('input')).forEach((input) => {
+          input.addEventListener('input', () => {
+            let a = parseInt(document.querySelector('#a').value || 0);
+            let b = parseInt(document.querySelector('#b').value || 0);
 
             // Create a variable called "sum" on the line below. It should be equal to a + b.
-
-            document.querySelector("#answer").textContent = sum || "-";
+            let sum = a + b;
+            document.querySelector('#answer').textContent = sum || '-';
           });
         });
       })();
     </script>
   </body>
 </html>
+

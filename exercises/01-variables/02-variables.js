@@ -4,3 +4,6 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let year = new Date().getFullYear();
+console.log(year);
