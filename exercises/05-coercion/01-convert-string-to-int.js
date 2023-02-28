@@ -6,3 +6,10 @@ let answer = "55"; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+
+if (new Date()) {
+  console.log("It's truthy 😊");
+} else {
+  console.log("It's false 🥹");
+}

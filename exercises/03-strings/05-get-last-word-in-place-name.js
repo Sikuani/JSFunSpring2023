@@ -18,6 +18,15 @@ const place = "New Jersey"; // e.g.
 // WRITE YOUR ANSWER BELOW THIS LINE
 let newPlace = place.indexOf(" ");
 console.log(newPlace);
+
 const lastPlace = place.substring(newPlace + 1);
 console.log("'" + lastPlace +  "'");
 
+let index = place.indexOf(" ")
+
+const myString = "i'm typing without autocapitalize"; // How can we capitalize just the first character in the string?
+
+const firstChart = myString[0]
+const myString2 = str.charAt(0);
+
+console.log(myString2 + myString);
