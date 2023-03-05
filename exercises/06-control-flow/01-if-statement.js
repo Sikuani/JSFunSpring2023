@@ -1,4 +1,4 @@
-const burger = 7.0; // e.g.
+const burger = 7.0; // e.g. 
 const drink = 1.99; // e.g.
 
 let total = burger;
@@ -17,3 +17,18 @@ let isBuyingDrink = true; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let totalCost = total + drink;
+
+function totalCombo () {
+  if (isBuyingDrink === true) {
+    totalCost = burger + drink
+  }
+
+  else {
+    totalCost = burger;
+  }
+}
+
+totalCombo()
+console.log(totalCost);

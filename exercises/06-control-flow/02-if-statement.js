@@ -13,3 +13,17 @@ let total;
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+function myTips () {
+  if (tip > 0) {
+    total = subtotal + tip;
+  }
+
+  else if (tip === 0 || false){
+    total = subtotal
+  }
+
+}
+
+myTips()
+
+console.log(total);

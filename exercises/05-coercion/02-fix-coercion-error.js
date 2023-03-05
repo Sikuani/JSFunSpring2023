@@ -1,5 +1,5 @@
 let num1 = 2; // e.g.
-let num2 = "7"; // e.g.
+let num2 = "7.65"; // e.g.
 
 /**
  * If I were to log the code below, it does not print out what I would expect.
