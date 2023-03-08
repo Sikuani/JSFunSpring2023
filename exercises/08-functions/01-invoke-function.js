@@ -3,9 +3,9 @@
  * @param {number} tax
  * @returns {number} the total cost, including the tax
  */
-const calculateTotal = (subtotal, tax) => {
-  return subtotal * tax + subtotal;
-};
+// const calculateTotal = (subtotal, tax) => {
+//   return subtotal * tax + subtotal;
+// };
 
 /**
  * You are paying your bill. You have a subtotal of $50.00 and tax is 2%.
@@ -15,3 +15,17 @@ const calculateTotal = (subtotal, tax) => {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let subtotal = 50;
+
+
+
+const calculateTotal = (subtotal, tax2) => {
+  return ((subtotal * tax2) + subtotal);
+};
+
+calculateTotal(50, 20)
+
+let total  = calculateTotal + subtotal;
+
+
+console.log(total);

@@ -10,3 +10,10 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+function printGreeting() {
+  let name = prompt('What is your name?');
+  console.log('Hello ' + name);
+}
+
+printGreeting();

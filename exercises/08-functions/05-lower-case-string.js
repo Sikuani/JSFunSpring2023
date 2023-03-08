@@ -16,3 +16,8 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let lowerCaseString = (str) => {
+  return str.toLowerCase();
+};
+
+lowerCaseString('MANUEL');
