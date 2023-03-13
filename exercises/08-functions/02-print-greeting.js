@@ -10,10 +10,8 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const printGreeting = (name) => {
+  console.log(`Hello ${name}!`);
+};
 
-function printGreeting() {
-  let name = prompt('What is your name?');
-  console.log('Hello ' + name);
-}
-
-printGreeting();
+printGreeting('Michele');

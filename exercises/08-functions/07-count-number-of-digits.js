@@ -10,9 +10,5 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
-
-let countNumberOfDigits = (num) => {
-  console.log(num.toString().length);
-};
-
-countNumberOfDigits(454566);
+let countNumberOfDigits = (num) => Math.abs(num).toString().length;
+console.log(countNumberOfDigits(645456));

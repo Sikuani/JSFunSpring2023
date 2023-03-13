@@ -17,7 +17,9 @@
 
 // WRITE YOUR ANSWER BELOW THIS LINE
 let lowerCaseString = (str) => {
-  return str.toLowerCase();
-};
+if (typeof str !== "string"){
+  return undefined
+} return str.toLowerCase();
+}
 
-lowerCaseString('MANUEL');
+console.log(lowerCaseString("Carol"));

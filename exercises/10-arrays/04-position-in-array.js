@@ -2,8 +2,8 @@ let results = [
   // e.g.
   "Aaminata Kamau",
   "Claire O'Hannigan",
-  "Jian Hou",
   "María Rosales",
+  "Jian Hou",
   "Fathima Kaur",
 ];
 
@@ -19,3 +19,6 @@ let results = [
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let place = results.indexOf("Jian Hou") + 1;
+console.log(place);

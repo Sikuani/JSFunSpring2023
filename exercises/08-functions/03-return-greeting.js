@@ -13,9 +13,5 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
-function returnGreeting() {
-  let name = prompt('What is your name?');
-  return 'Hello ' + name;
-}
-
-returnGreeting();
+const returnGreeting = (name) => `Hello ${name}!`
+console.log(returnGreeting("Jhon"));
