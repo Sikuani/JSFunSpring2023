@@ -31,45 +31,48 @@
       </table>
     </div>
     <script>
-      /**
-       * Note: We will be going over a lot of what this code is doing later when we talk about the "DOM".
-       * For now, you just need to use what you've learned about arrays to complete this exercise.
-       * If you get this exercise right, you should see a table of names with 15 rows
-       * and the first place should begin with "1" instead of "0".
-       */
+          /**
+           * Note: We will be going over a lot of what this code is doing later when we talk about the "DOM".
+           * For now, you just need to use what you've learned about arrays to complete this exercise.
+           * If you get this exercise right, you should see a table of names with 15 rows
+           * and the first place should begin with "1" instead of "0".
+           */
 
-      // Do not change this.
-      !(function () {
-        const results = [
-          "Hannah Ahmed",
-          "Chun Yu",
-          "Mathew Fuller",
-          "Leandro Campana",
-          "Georgine St Pierre",
-          "Gabriel Zimmerman",
-          "Kristina Straub",
-          "Mikhael Moshe",
-          "Nishant Patel",
-          "Xue Chong",
-          "Tomoko Matsushita",
-          "Valentin Kovalev",
-          "Débora Meléndez",
-          "Bridget Kavanah",
-          "Mwenya Arendse",
-        ];
+          // Do not change this.
+          !(function () {
+            const results = [
+              "Hannah Ahmed",
+              "Chun Yu",
+              "Mathew Fuller",
+              "Leandro Campana",
+              "Georgine St Pierre",
+              "Gabriel Zimmerman",
+              "Kristina Straub",
+              "Mikhael Moshe",
+              "Nishant Patel",
+              "Xue Chong",
+              "Tomoko Matsushita",
+              "Valentin Kovalev",
+              "Débora Meléndez",
+              "Bridget Kavanah",
+              "Mwenya Arendse",
+            ];
 
-        const tableBody = document.querySelector("#tableBody");
+            const tableBody = document.querySelector("#tableBody");
 
-        const addToTable = (place, name) => {
-          const htmlString = `<tr><td>${place}</td><td>${name}</td></tr>`;
-          tableBody.insertAdjacentHTML('beforeend', htmlString);
-        };
+            const addToTable = (place, name) => {
+              const htmlString = `<tr><td>${place}</td><td>${name}</td></tr>`;
+              tableBody.insertAdjacentHTML('beforeend', htmlString);
+            };
 
-        // Right now, this only adds the first person in the "results" array to the table.
-        // Create a loop here and use this function within the loop
-        // to add every person's name to the table.
-        addToTable(1, results[0]); // Change me. This should be inside your loop.
-      })();
+            // Right now, this only adds the first person in the "results" array to the table.
+            // Create a loop here and use this function within the loop
+            // to add every person's name to the table.
+
+          for (let i = 0; i < results.length; i++ ) {
+        addToTable(i + 1, results[i]);
+      }
+          })();
     </script>
   </body>
 </html>

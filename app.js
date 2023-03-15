@@ -7,6 +7,8 @@
 //   contador++;
 // } while (contador <= 10);
 
+
+
 // // // for loop
 // for (let contador2 = 8; contador2 >= 1; contador2--) {
 //   console.log(contador2);
@@ -20,6 +22,13 @@
 //   contador3 = contador3++;
 // }
 
+
+
+
+
+
+
+//
 // Exercise Function
 // let greeting = () => {
 //   console.log("Good morning");
@@ -150,7 +159,6 @@
 // };
 // console.log(lowerCaseString("KAROL"));
 
-
 //08 FUNCTIONS -- COUNT NUMBER OF DIGITS --> Kevin Browne
 // /**
 //  * Create a function called "countNumberOfDigits".
@@ -167,3 +175,57 @@
 // let countNumberOfDigits = (num) => Math.abs(num).toString().length;
 
 // console.log(countNumberOfDigits(645456));
+
+// for (let i = 10; i > 0; i--) {
+//   console.log(i);
+// }
+
+
+// 11 LOOPS 07 PALIDROME
+
+//FUNCION NUMERO 1
+// function palindrome(str) {
+//   // Step 1. Lowercase the string and use the RegExp to remove unwanted characters from it
+//   var re = /[\W_]/g; // or var re = /[^A-Za-z0-9]/g;
+  
+//   var lowRegStr = str.toLowerCase().replace(re, '');
+//   // str.toLowerCase() = "A man, a plan, a canal. Panama".toLowerCase() = "a man, a plan, a canal. panama"
+//   // str.replace(/[\W_]/g, '') = "a man, a plan, a canal. panama".replace(/[\W_]/g, '') = "amanaplanacanalpanama"
+//   // var lowRegStr = "amanaplanacanalpanama";
+     
+//   // Step 2. Use the same chaining methods with built-in functions from the previous article 'Three Ways to Reverse a String in JavaScript'
+//   var reverseStr = lowRegStr.split('').reverse().join(''); 
+//   // lowRegStr.split('') = "amanaplanacanalpanama".split('') = ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"]
+//   // ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"].reverse() = ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"]
+//   // ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"].join('') = "amanaplanacanalpanama"
+//   // So, "amanaplanacanalpanama".split('').reverse().join('') = "amanaplanacanalpanama";
+//   // And, var reverseStr = "amanaplanacanalpanama";
+   
+//   // Step 3. Check if reverseStr is strictly equals to lowRegStr and return a Boolean
+//   return reverseStr === lowRegStr; // "amanaplanacanalpanama" === "amanaplanacanalpanama"? => true
+// }
+ 
+// console.log(palindrome("A man, a plan, a canal. Panama"));
+
+
+//FUNCION NUMERO 2
+
+let string = 'racecar';
+
+function checkPalindrome(string) {
+
+
+  const arrayValues = string.split('');   // convert string to an array
+  const reverseArrayValues = arrayValues.reverse(); // reverse the array values
+  const reverseString = reverseArrayValues.join(''); // convert array to string
+
+  if(string === reverseString) {
+      return "true"
+  }
+  else {
+      return 'false'
+  }
+}
+
+console.log(checkPalindrome("SOMOS O NO SOMOS"));
+

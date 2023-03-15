@@ -8,7 +8,9 @@ let array2 = ["lion", "leopard", "saber tooth tiger"];
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
-let newArray = array1.concat(array2)
+// let newArray = array1.concat(array2)
 
+// console.log(newArray);
+
+let newArray = [...array1, ...array2];
 console.log(newArray);
-

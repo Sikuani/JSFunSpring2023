@@ -8,3 +8,10 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let tens = 0
+
+while (tens <= 9) {  
+  tens ++;
+  console.log(tens * 10);
+}
+
