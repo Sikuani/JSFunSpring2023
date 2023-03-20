@@ -15,3 +15,9 @@ let student = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+student.name = "Manuel Pinzon";
+student.skills.push("HTML", "CSS")
+
+
+
+console.log(student);

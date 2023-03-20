@@ -36,41 +36,45 @@
       // Do not change this.
       !(function () {
         const movies = {
-          "halloween-ends": {
-            title: "Halloween Ends",
+          'halloween-ends': {
+            title: 'Halloween Ends',
             description:
-              "The saga of Michael Myers and Laurie Strode comes to a spine-chilling climax in the final installment of this trilogy.",
+              'The saga of Michael Myers and Laurie Strode comes to a spine-chilling climax in the final installment of this trilogy.',
           },
           till: {
-            title: "Till",
+            title: 'Till',
             description:
-              "In 1955, after Emmett Till is murdered in a brutal lynching, his mother vows to expose the racism behind the attack while working to have those involved brought to justice.",
+              'In 1955, after Emmett Till is murdered in a brutal lynching, his mother vows to expose the racism behind the attack while working to have those involved brought to justice.',
           },
-          "black-adam": {
-            title: "Black Adam",
+          'black-adam': {
+            title: 'Black Adam',
             description:
-              "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods - and imprisoned just as quickly - Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+              'Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods - and imprisoned just as quickly - Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.',
           },
         };
 
-        const list = document.querySelector("#list");
+        const list = document.querySelector('#list');
 
         /**
          * Loop through the object "movies" below.
          * The code below should go inside the loop.
          * Change the code below so that it will work for the other movies too.
          */
-        let movie = movies["halloween-ends"];
+
+         let movie = movies['halloween-ends'];
         const htmlString = `<li class="list-group-item d-flex justify-content-between align-items-start">
           <div class="ms-2 me-auto">
             <div class="fw-bold">${movie.title}</div>
             ${movie.description}
           </div>
         </li>`;
-        list.insertAdjacentHTML("beforeend", htmlString);
+        list.insertAdjacentHTML('beforeend', htmlString);
 
         // Do not change anything below this line.
       })();
     </script>
   </body>
 </html>
+
+
+

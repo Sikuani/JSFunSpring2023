@@ -210,22 +210,44 @@
 
 //FUNCION NUMERO 2
 
-let string = 'racecar';
+// let string = 'racecar';
 
-function checkPalindrome(string) {
+// function checkPalindrome(string) {
 
 
-  const arrayValues = string.split('');   // convert string to an array
-  const reverseArrayValues = arrayValues.reverse(); // reverse the array values
-  const reverseString = reverseArrayValues.join(''); // convert array to string
+//   const arrayValues = string.split('');   // convert string to an array
+//   const reverseArrayValues = arrayValues.reverse(); // reverse the array values
+//   const reverseString = reverseArrayValues.join(''); // convert array to string
 
-  if(string === reverseString) {
-      return "true"
-  }
-  else {
-      return 'false'
-  }
-}
+//   if(string === reverseString) {
+//       return "true"
+//   }
+//   else {
+//       return 'false'
+//   }
+// }
 
-console.log(checkPalindrome("SOMOS O NO SOMOS"));
+// console.log(checkPalindrome("SOMOS O NO SOMOS"));
+
+
+//Exercises
+let employees = [
+  {name: "Jhon", salary: 90000, hireDate: "July 1, 2010"},
+  {name: "David", salary: 75000, hireDate: "July 1, 2010"},
+  {name: "Ana", salary: 80000, hireDate: "July 1, 2010"}
+];
+
+// for (let i = 0; i < employees.length; i++) {
+//   console.log(employees[i]);
+// }
+
+//employees.forEach((employee, index) => console.log(employee.name, index)); // lista indexada de los empleados
+
+const highTier = employees.filter(function(employee){
+  if(employee.salary > 75000) {
+    return true
+  } 
+})
+
+console.log(employees, highTier);
 

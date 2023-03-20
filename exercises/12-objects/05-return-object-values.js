@@ -18,3 +18,8 @@ const blogPost = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let values = [
+  blogPost.title, blogPost.author, blogPost.date, blogPost.content
+]
+
+console.log(values);

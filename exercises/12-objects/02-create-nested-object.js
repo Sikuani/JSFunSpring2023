@@ -1,8 +1,8 @@
-let name = "Eddie Willard"; // e.g.
+let name = 'Eddie Willard'; // e.g.
 let graduationYear = 2022; // e.g.
-let skills = ["Javascript", "React", "CSS"]; // e.g.
-let githubLink = "https://github.com/example/profile"; // e.g.
-let linkedInLink = "https://linkedin.com/profile"; // e.g.
+let skills = ['Javascript', 'React', 'CSS']; // e.g.
+let githubLink = 'https://github.com/example/profile'; // e.g.
+let linkedInLink = 'https://linkedin.com/profile'; // e.g.
 
 /**
  * Create a nested object called "graduate".
