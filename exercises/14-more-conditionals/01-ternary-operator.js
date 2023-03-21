@@ -11,3 +11,17 @@ let num = 8; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+// number = 34;
+
+// let isEvenOrOdd() {
+//   return number % 2 === 0 ? "is even": 
+// : number "is odd"
+// }
+
+// console.log(isEvenOrOdd);
+
+
+// Respuesta Kevin Browne
+const isEvenOrOdd = 8 % 2 === 0 ? "even" : "odd";
+console.log(isEvenOrOdd);
+

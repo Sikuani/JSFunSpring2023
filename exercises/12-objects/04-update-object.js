@@ -18,6 +18,4 @@ let student = {
 student.name = "Manuel Pinzon";
 student.skills.push("HTML", "CSS")
 
-
-
 console.log(student);

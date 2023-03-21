@@ -1,7 +1,7 @@
 const links = {
   Dogs: 'http://www.omfgdogs.com',
-  Kittens: 'https://giphy.com/search/kitten',
-  'Hamster Dance': 'https://hamster.dance/hamsterdance/',
+  // Kittens: 'https://giphy.com/search/kitten',
+  'Hamster Dance': 'https://hamster.dance/hamsterdance/'
 };
 
 /**
@@ -17,22 +17,11 @@ const links = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
-// for (let i = 0; i < links.length; i++) {
-// let link = links[i];
-// let html = (link)
-// console.log(html);
+let html ="";
 
-// }
-
-// let link1 = links.Dogs;
-// let link2 = links.Kittens;
-// let link3 = links[2];
-
-// console.log(link1);
-// console.log(link2);
-// console.log(link3);
-
-for (const link in links) {
-  let html = `<a ref="${links[link]}">${link}</a>`;
+for (let text in links) {
+  console.log(text);
+  console.log(links[text]);
+  html += `<a ref="${links[text]}">${text}</a>`;
   console.log(html);
 }
