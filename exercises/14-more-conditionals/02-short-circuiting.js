@@ -14,6 +14,4 @@ let error = "Username already exists."; // When the test runs, this could also b
 // Answer Erdem Zengin
 let errorMessage = error || "An unexpected error occurred.";
 
-
-let errorMessage;
 console.log(errorMessage || error || "An unexpected error occurred."); 

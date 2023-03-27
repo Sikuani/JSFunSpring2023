@@ -19,12 +19,28 @@ const capitalizeString = (str) => {
  * const result = capitalizeArray(['hello', 'world'], capitalizeString); // ['HELLO', 'WORLD']
  */
 const capitalizeArray = (originalArray, callback) => {
-  // WRITE YOUR ANSWER IN HERE
+  //WRITE YOUR ANSWER IN HERE
+  let result = originalArray;
+
+  for (let i = 0; i < result.length; i++) {
+    console.log(result[i]);
+    return(capitalizeString(result[i]));    
+  }  
+
 };
 
 // Uncomment me to test your answer in Quokka
-// const result = capitalizeArray(['hello', 'world'], capitalizeString);
+console.log(capitalizeArray(['hello', 'world'], capitalizeString));
+
 
 // IGNORE THIS BELOW. It is for the tests.
 
 export { capitalizeArray };
+
+
+
+
+
+
+
+

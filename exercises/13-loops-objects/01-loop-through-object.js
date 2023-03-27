@@ -23,5 +23,7 @@ for (let text in links) {
   console.log(text);
   console.log(links[text]);
   html += `<a ref="${links[text]}">${text}</a>`;
-  console.log(html);
+  console.log(`<a ref="${links[text]}">${text}</a>`);
 }
+
+console.log(html);
