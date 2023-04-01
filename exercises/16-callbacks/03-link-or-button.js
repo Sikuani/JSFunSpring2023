@@ -20,11 +20,7 @@ const createButton = (text) => {
 // CHANGE SOMETHING WITH THE FUNCTION DECLARATION
 const createCallToAction = (clickableText, callback) => {
   // CHANGE SOMETHING INSIDE THIS FUNCTION
-  if (callback === createLink) {
-    return createLink(clickableText);
-  } else if (callback === createButton) {
-    return createButton(clickableText);
-  }
+  return callback(clickableText);
 };
 
 // CHANGE SOMETHING HERE TOO so that creates a link
@@ -35,3 +31,16 @@ console.log(createCallToAction('Book Now', createButton));
 
 export { createCallToAction };
 
+
+
+//My answer
+/*
+if (callback === createLink) {
+  return createLink(clickableText);
+} else if (callback === createButton) {
+  return createButton(clickableText);
+}*/
+
+//Answer Erdem Zengin
+/*
+return ("<div>Limited time: members save 30%<br>" + callback(clickableText) + "</div>")*/

@@ -22,10 +22,17 @@ const doubleNumber = (num) => {
 
 const doubleArray = (originalArray, doubleNumber) => {
   // WRITE YOUR ANSWER IN HERE
-  
-}
+  // Kevin Browne's answer
+  const result = [];
+  originalArray.forEach((num) => {
+    const doubledNum = doubleNumber(num);
+    result.push(doubledNum);
+  });
+  return result;
+};
+
 // Uncomment me to test your answer in Quokka
-//doubleArray([1, 2, 3], doubleNumber);
+doubleArray([1, 2, 3], doubleNumber);
 
 // IGNORE THIS BELOW. It is for the tests.
 

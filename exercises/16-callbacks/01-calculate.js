@@ -28,12 +28,7 @@ const subtract = (num1, num2) => {
 
 const calculate = (num1, num2, callback) => {
   // WRITE YOUR ANSWER IN HERE
-  if (callback === add) {
-    return add(num1, num2)
-  } else if (callback === subtract) {
-    return subtract(num1, num2);
-  }
-    
+  return callback(num1, num2); ////Erdem Zengin's answer 
 };
 
 // Uncomment me to test in Quokka
@@ -43,3 +38,10 @@ console.log(calculate(7, 3, subtract));
 // IGNORE THIS BELOW. It is for the tests.
 
 export { calculate };
+
+//My answer
+/*if (callback === add) {
+    return add(num1, num2)
+  } else if (callback === subtract) {
+    return subtract(num1, num2);
+  }*/

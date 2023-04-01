@@ -24,3 +24,10 @@ const links = [
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const createLink = (link, num) => {
+  htmlStr += (`<a href="${link}"> ${num+1}. ${link}</a>`);
+}
+
+links.forEach(createLink);
+
+console.log(htmlStr);
