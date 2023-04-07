@@ -12,4 +12,23 @@
  */
 (function () {
   // Put your answers in here
+  console.log(document.querySelector("li"));
+
+  console.log(document.querySelector("#myId"));
+
+  const yellowBg = document.querySelectorAll(".bg-warning");
+  yellowBg.forEach((yellow) => {
+    console.log(yellow);
+    yellow.style.backgroundColor = "red";
+  });
+
+  let buttonTarget = document.querySelector("#buttonTarget");
+  buttonTarget.style.backgroundColor = "red";
+
+  console.log(document.querySelectorAll('[data-social="socialLinks"'));
+  
+  let cells = document.querySelectorAll(`#myRow .col`);
+  cells.forEach((cell) => {
+    console.log(cell);
+  }) 
 })();

@@ -11,6 +11,12 @@
       crossorigin="anonymous"
     />
     <script src="targeting-dom.js" defer></script>
+
+    <!-- <style>
+      #myRow > .col {
+        background-color: yellow !important;
+      }
+    </style> -->
   </head>
   <body>
     <div class="alert alert-info">
@@ -74,7 +80,9 @@
       </p>
       <div class="mb-4">
         <button class="btn btn-secondary" type="button">Ignore Me</button>
-        <button class="btn btn-secondary" type="button">Target Me</button>
+        <button id="buttonTarget" class="btn btn-secondary" type="button">
+          Target Me
+        </button>
         <button class="btn btn-secondary" type="button">Ignore Me</button>
         <button class="btn btn-secondary" type="button">Ignore Me</button>
       </div>
@@ -84,11 +92,21 @@
         modify the HTML.
       </p>
       <div>
-        <a href="https://www.facebook.com">Facebook</a> |
-        <a href="https://www.google.com">Google Search Engine</a> |
-        <a href="https://www.twitter.com">Twitter</a> |
-        <a href="https://www.instagram.com">Instagram</a> |
-        <a href="https://www.bing.com">Bing</a>
+        <a data-social="socialLinks" href="https://www.facebook.com"
+          >Facebook</a
+        >
+        |
+        <a data-social="socialLinks" href="https://www.google.com"
+          >Google Search Engine</a
+        >
+        |
+        <a data-social="socialLinks" href="https://www.twitter.com">Twitter</a>
+        |
+        <a data-social="socialLinks" href="https://www.instagram.com"
+          >Instagram</a
+        >
+        |
+        <a data-social="socialLinks" href="https://www.bing.com">Bing</a>
       </div>
     </section>
 

@@ -17,4 +17,20 @@
    * 2. Change the text to say e.g. "Loading ..." once it is clicked.
    */
   // Write your answer here
+  //Problem 1: Alert Me
+  let alertButton = document.querySelector("#alertButton");
+    let handleAlert = ()=> {
+    alert("Alert me!")
+  };
+  alertButton.addEventListener("click", handleAlert)
+
+
+//Problem 2: Disable button
+  let cardButton = document.querySelector(".cardButton");
+
+  let deactivate = () => {
+    cardButton.disabled = true;
+    cardButton.textContent = "Loading...";
+  }
+  cardButton.addEventListener("click", deactivate)
 })();
