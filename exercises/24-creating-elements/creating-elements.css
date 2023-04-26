@@ -1,0 +1,47 @@
+html {
+  font-size: 1.5rem;
+  
+}
+
+body {
+  background-color:beige;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  margin: 30px auto;
+  width: 500px;
+  height: 600px;
+  padding: 0 10px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.btn-success {
+  background-color: lightgreen;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-danger {
+  background-color: lightcoral;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+fieldset {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+#inputQuestion, .form-select {
+  font-size: 1rem;
+}

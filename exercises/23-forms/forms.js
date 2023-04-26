@@ -10,6 +10,15 @@
    * it should display what the user is typing in the <div></div> tags below.
    */
   // Write your answer here
+
+  const input = document.querySelector("#textMystery");
+  const renderDiv = document.querySelector("#divDisplay");
+
+  input.addEventListener("input", () => {
+    renderDiv.textContent = input.value;
+  });
+
+
   /**
    * Problem 2: Display the results of the world's most pointless search engine.
    *
@@ -23,6 +32,19 @@
    * and you must prevent the page from refreshing when the form is submitted.
    */
   // Write your answer here
+    const inputSearch = document.querySelector("#inputSearch");
+    const inputSearchButton = document.querySelector("#inputSearchButton")
+    const textWhite = document.querySelector(".text-white");
+
+    const formSearch = document.querySelector(".form-group")
+
+    formSearch.addEventListener("submit", (e) =>{
+      e.preventDefault() //to prevent the refresh page
+      textWhite.innerText += `No results for ${inputSearch.value} found`
+
+    })
+
+
   /**
    * Problem 3: Agree to the terms and conditions
    *
@@ -34,4 +56,22 @@
    * To start, you will need to hide some element on the page and change the input's classes.
    */
   // Write your answer here
+
+  const termsButton = document.querySelector(".termsButton");
+  const formCheckInput = document.querySelector(".form-check-input")
+  const textDanger = document.querySelector(".text-danger")  
+  const textSuccess = document.querySelector(".text-success")  
+  const formTerms = document.querySelector(".formTerms")
+  
+  formTerms.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (formCheckInput.checked) {
+      textSuccess.style.display = "block"
+      textDanger.style.display = "none"
+    } else {
+      textSuccess.style.display = "none"
+      textDanger.style.display = "block"
+    }
+  })
+
 })();

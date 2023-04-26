@@ -13,4 +13,28 @@
    * You can also make the "x" icon dismiss the notification.
    */
   // Write your answer here
+
+  //target all plans buttons
+  const pricingButtons = document.querySelectorAll(".pricing-plan button");
+
+  //target notification
+  const notification = document.querySelector("#notification");
+  const notificationMessage = document.querySelector("#notificationMessage");
+
+  //loops through the pricing buttons
+  pricingButtons.forEach((plan) => {
+    plan.addEventListener("click", () => {
+      notificationMessage.textContent = `Thank you for purchaising the ${plan.id} plan!`;
+
+      // Show the hidden message
+      notification.style.display = "block";
+    });
+  });
+
+  //hide the notification
+  const deleteButton = document.querySelector(".delete")
+
+  deleteButton.addEventListener("click", () => {
+    notification.style.display = "none"
+  })
 })();

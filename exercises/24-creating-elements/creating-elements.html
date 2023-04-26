@@ -24,6 +24,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="creating-elements.css" />
     <title>EXERCISES Creating Elements</title>
 
     <!--
@@ -34,5 +35,43 @@
   </head>
   <body>
     <!-- Put your HTML here -->
+    <form class="userForm">
+      <!-- Form Name -->
+      <legend>Frequent Questions</legend>
+
+      <!-- Button Drop Down -->
+      <div>
+        <input
+          type="text"
+          id="inputQuestion"
+          class="form-control"
+          placeholder="Text your question here"
+        />
+      </div>
+      <div>
+        <p>Who do you want to take care of you?</p>
+        <select id="selectOptions" class="form-select">
+          <option>Asistant</option>
+          <option>Manager</option>
+          <option>Coordinator</option>
+        </select>
+      </div>      
+
+      <!-- Button (Double) -->
+      <div class="submitButtons">
+        <button type="submit" id="buttonRequestGreen" class="btn btn-success">
+          Send request
+        </button>
+        
+      </div>
+
+      <div>
+        <p id="textAnswer"></p>
+      </div>
+
+
+    </form>
+
+    <script src="creating-elements.js"></script>
   </body>
 </html>

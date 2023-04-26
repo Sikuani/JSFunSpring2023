@@ -18,19 +18,24 @@
    */
   // Write your answer here
   //Problem 1: Alert Me
+
   let alertButton = document.querySelector("#alertButton");
-    let handleAlert = ()=> {
-    alert("Alert me!")
-  };
-  alertButton.addEventListener("click", handleAlert)
 
+  alertButton.addEventListener("click", () => {
+    alert("Alert mee!");
+  });
 
-//Problem 2: Disable button
+  //Problem 2: Disable button
+
+  //step 1 >> Target
   let cardButton = document.querySelector(".cardButton");
+  cardButton.type = "submit";
 
-  let deactivate = () => {
-    cardButton.disabled = true;
-    cardButton.textContent = "Loading...";
-  }
-  cardButton.addEventListener("click", deactivate)
+  //step 2 >> reacc al evento
+  const reactToCharge = () => {
+    // Do something - disable the button and change the text to say loading...
+    cardButton.disabled = "disabled";
+    cardButton.textContent = "Loading ...";
+  };
+  cardButton.addEventListener("click", reactToCharge);
 })();
