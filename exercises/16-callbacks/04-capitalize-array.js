@@ -30,7 +30,7 @@ const capitalizeArray = (originalArray, callback) => {
 };
 
 // Uncomment me to test your answer in Quokka
-console.log(capitalizeArray(['hello', 'world'], capitalizeString));
+console.log(capitalizeArray(['hello', 'world', 'dog'], capitalizeString));
 
 // IGNORE THIS BELOW. It is for the tests.
 

@@ -20,12 +20,12 @@ const doubleNumber = (num) => {
  * const result = doubleArray([1, 2, 3], doubleNumber); // [2, 4, 6]
  */
 
-const doubleArray = (originalArray, doubleNumber) => {
+const doubleArray = (originalArray, callback) => {
   // WRITE YOUR ANSWER IN HERE
   // Kevin Browne's answer
   const result = [];
   originalArray.forEach((num) => {
-    const doubledNum = doubleNumber(num);
+    const doubledNum = callback(num);
     result.push(doubledNum);
   });
   return result;
@@ -37,3 +37,4 @@ doubleArray([1, 2, 3], doubleNumber);
 // IGNORE THIS BELOW. It is for the tests.
 
 export { doubleArray };
+

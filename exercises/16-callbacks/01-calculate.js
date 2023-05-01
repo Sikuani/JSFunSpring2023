@@ -36,7 +36,6 @@ console.log(calculate(5, 10, add));
 console.log(calculate(7, 3, subtract));
 
 // IGNORE THIS BELOW. It is for the tests.
-
 export { calculate };
 
 //My answer

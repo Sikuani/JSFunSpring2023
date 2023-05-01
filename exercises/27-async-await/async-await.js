@@ -18,12 +18,12 @@
       method: "GET",
       url: "https://ron-swanson-quotes.herokuapp.com/v2/quotes",
     });
-    console.log(response);
+    console.log(response.data);
 
     // Get the request from the response
 
     // Display on the page
     const quote = document.querySelector("#quote");
-    quote.textContent = "Ran Swanson said so";
+    quote.textContent = `Ran Swanson said so: ${response.data}`;
   });
 })();

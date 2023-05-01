@@ -17,4 +17,33 @@
    *
    * You must make two AJAX request to solve this problem.
    */
+
+  let dropdown = document.querySelector("#dropdown");
+  let getSchwifty = document.querySelector("#get-schwifty");
+  let selection = null;
+
+  async function chooseCharacter() {
+    try {
+    const getApi = await fetch("https://rickandmortyapi.com/api/character"); //get the api
+
+    const data = await getApi.json(); //convert string to json
+
+    data.results.forEach((items) => {
+      //loop the array
+      dropdown.innerHTML += `<option>${items.name}</option>`;
+    });
+
+    dropdown.addEventListener("change", () => {
+      selection = dropdown.selectedIndex;
+      getSchwifty.src = `https://rickandmortyapi.com/api/character/avatar/${selection}.jpeg`;
+    })}
+
+    catch (error) {
+      console.log(error);
+    }
+  }
+  chooseCharacter();
+
+  
+
 })();
