@@ -41,4 +41,108 @@
    *   </td>
    * </tr>
    */
+
+  const getProducts = async () => {
+    const response = await fetch('https://dummyjson.com/products');
+    const data = await response.json();
+    console.log(data.products);
+    showProducts(data.products);
+  };
+  
+  const showProducts = (products) => {
+    const table = document.querySelector('#productTableBody');
+    table.innerHTML = '';
+    products.forEach((product) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td data-id=${product.id}>${product.id}</td>
+        <td>${product.title}</td>
+        <td>${product.description}</td>
+        <td>${product.price}</td>
+        <td>${product.discountPercentage}</td>
+        <td>${product.rating}</td>
+        <td>${product.stock}</td>
+        <td>${product.brand}</td>
+        <td>${product.category}</td>
+        <td>
+          <button class="btn btn-danger btn-sm delete-product-btn">Delete</button>
+        </td>
+      `;
+      table.appendChild(row);
+    });
+    // delete product
+    const deleteBtns = document.querySelectorAll('.delete-product-btn');
+    deleteBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const tdElement = e.target.parentElement.parentElement.firstElementChild;
+        const id = tdElement.dataset.id;
+        deleteProduct(id);
+        btn.parentElement.parentElement.remove();
+      });
+    });
+  };
+  
+  const deleteProduct = async (id) => {
+    const response = await fetch(`https://dummyjson.com/products/${id}`, {
+      method: 'DELETE',
+    });
+    const data = await response.json();
+    console.log(data);
+  };
+  
+  const getFormData = () => {
+    const form = document.querySelector('#productForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = {
+        title: form.title.value,
+        description: form.description.value,
+        price: form.price.value,
+        discountPercentage: form.discountPercentage.value,
+        rating: form.rating.value,
+        stock: form.stock.value,
+        brand: form.brand.value,
+        category: form.category.value,
+      };
+      console.log(formData);
+      addProduct(formData);
+    });
+  };
+  
+  const addProduct = async (product) => {
+    const response = await fetch('https://dummyjson.com/products/add', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(product),
+    });
+    const data = await response.json();
+    console.log(data);
+    addSingleProduct(data);
+  }
+  
+  const addSingleProduct = (product) => {
+    const table = document.querySelector('#productTableBody');
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td data-id=${product.id}>${product.id}</td>
+      <td>${product.title}</td>
+      <td>${product.description}</td>
+      <td>$${product.price}</td>
+      <td>${product.discountPercentage}</td>
+      <td>${product.rating}</td>
+      <td>${product.stock}</td>
+      <td>${product.brand}</td>
+      <td>${product.category}</td>
+      <td>
+        <button class="btn btn-danger btn-sm delete-product-btn">Delete</button>
+      </td>
+    `;
+    table.appendChild(row);
+  }
+  
+  getProducts();
+  getFormData();
+
 })();
