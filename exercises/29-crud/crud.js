@@ -46,7 +46,7 @@
     const response = await fetch('https://dummyjson.com/products');
     const data = await response.json();
     console.log(data.products);
-    showProducts(data.products);
+    showProducts(data.products); //Array with all products
   };
   
   const showProducts = (products) => {
@@ -55,10 +55,10 @@
     products.forEach((product) => {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td data-id=${product.id}>${product.id}</td>
+        <td data-id=${product.id}>${product.id}</td> 
         <td>${product.title}</td>
         <td>${product.description}</td>
-        <td>${product.price}</td>
+        <td>$${product.price}</td>
         <td>${product.discountPercentage}</td>
         <td>${product.rating}</td>
         <td>${product.stock}</td>
@@ -76,24 +76,23 @@
       btn.addEventListener('click', (e) => {
         const tdElement = e.target.parentElement.parentElement.firstElementChild;
         const id = tdElement.dataset.id;
-        deleteProduct(id);
+        deleteProduct(id);    //Invoke function
         btn.parentElement.parentElement.remove();
       });
     });
   };
   
-  const deleteProduct = async (id) => {
+  const deleteProduct = async (id) => {   //declare function
     const response = await fetch(`https://dummyjson.com/products/${id}`, {
       method: 'DELETE',
     });
     const data = await response.json();
-    console.log(data);
-  };
+   };
   
   const getFormData = () => {
     const form = document.querySelector('#productForm');
     form.addEventListener('submit', (e) => {
-      e.preventDefault();
+      e.preventDefault();   // Prevent refreshing webpage
       const formData = {
         title: form.title.value,
         description: form.description.value,
@@ -104,25 +103,24 @@
         brand: form.brand.value,
         category: form.category.value,
       };
-      console.log(formData);
-      addProduct(formData);
+      addProduct(formData); // Invoke function
     });
   };
   
-  const addProduct = async (product) => {
+  const addProduct = async (formData) => {
     const response = await fetch('https://dummyjson.com/products/add', {
-      method: 'POST',
+      method: 'POST',   // Push to Api server
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(product),
+      body: JSON.stringify(formData), //Transform JSON to txt (string)
     });
-    const data = await response.json();
-    console.log(data);
+
+    const data = await response.json(); //Transform string to JSON
     addSingleProduct(data);
   }
   
-  const addSingleProduct = (product) => {
+  const addSingleProduct = (product) => { //add only 1 producto
     const table = document.querySelector('#productTableBody');
     const row = document.createElement('tr');
     row.innerHTML = `
